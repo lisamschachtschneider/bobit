@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-
+gem 'compass-rails'
+gem 'compass-susy-plugin'
+gem 'zurb-foundation', '~> 4.3.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.2'
 # Use postgresql as the database for Active Record

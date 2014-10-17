@@ -1,0 +1,30 @@
+html
+  head
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+  	= csrf_meta_tags
+
+  body
+  	div class= "row"
+      div class = "large-2 columns"
+        h3 app
+
+      div class = "large-8 columns"
+        h1 Bobit!
+        h2 Upload your music, get feedback, share with friends and family. 
+
+        ul class = "button-group radius even-2"
+
+          li.first: a class = "button" href = "/" Home
+
+          li.second:a class = "button" href = "about#pages" About
+                    
+          = yield
+
+      div class = "large-2 columns"
+        h3 app
+
+      
+  		
+
+   
