@@ -4,11 +4,48 @@
 
 $font-stack: Helvetica, sans-serif;
 
+html, body, h1, h2, h3, h4, p, ol, ul, li, a{
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+body{
+	padding: 20px 20px 20px 20px;
+}
+
+ol {
+	padding: 2px 0 0 50px;
+}
+
+ul{
+	padding: 2px 0 0 20px;
+}
+.about-header p{
+	padding: 0 0 0 40px;
+}
+.main-content p{
+	padding-left: 30px; 
+}
+
+.large-2.columns{
+	padding-top: 300px;
+}
+.large-8.columns{
+	/*background-color: #f9f5e9;
+	*/
+}
+
 .image-header{
 	width: 5000px;
 	display: block;
-	padding: 10px 100px 20px 100px;
+	padding: 10px 100px 100px 100px;
 }
-.footer{
-	padding: 150px 500px 150px 500px;
+.footer-row{
+	padding: 150px 500px 150px 150px;
 }
+
+
+
+
+
