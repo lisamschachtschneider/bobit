@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
 gem 'compass-rails'
 gem 'compass-susy-plugin'
 gem 'zurb-foundation', '~> 4.3.2'
