@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'songs/index'
+
+  get 'songs/upload'
+
+  get 'songs/delete'
+
   root 'pages#index'
   get 'about' => 'pages#about'
   get 'bands' => 'pages#bands'
