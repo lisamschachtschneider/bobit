@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'bands' => 'pages#bands'
   get 'songs' => 'pages#songs'
   get 'legal' => 'pages#legal'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -32,7 +34,7 @@ Rails.application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-  #   resources :products do
+  #  resources :products do
   #     resources :comments, :sales
   #     resource :seller
   #   end
