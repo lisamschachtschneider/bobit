@@ -1,6 +1,11 @@
-= form_for @song, html: { multipart: true } do |f|
+= form_for :song, html: { multipart: true } do |f|
 	p
+	 = f.label :title
 	 = f.file_field :song
+
+	p
+	 = f.label :artist
+	 = f.text_area :text
 
 	div.actions
 	 = f.submit "Upload"
