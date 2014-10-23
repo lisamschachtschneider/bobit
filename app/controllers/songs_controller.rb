@@ -3,7 +3,7 @@ class SongsController < ApplicationController
 
   def index
     @songs = Song.all
-    flash[:notice] = "Hello Flash"
+    flash[:notice] = t(:Hello_Flash)
   end
 
   def list
