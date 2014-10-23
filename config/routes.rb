@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   get 'songs/delete'
 
   root 'pages#index'
+  
   get 'about' => 'pages#about'
   get 'bands' => 'pages#bands'
   get 'songs' => 'pages#songs'
   get 'legal' => 'pages#legal'
+  resources :songs
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
