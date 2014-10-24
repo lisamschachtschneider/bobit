@@ -22,6 +22,7 @@
 en:
   layouts:
     application:
+      title: Bobit!
       tagline: "Upload your music, get feedback, share with friends and family."
       your_upvoted_songs: Your Upvoted Songs
       your_saved_bands: Bands You've Saved
