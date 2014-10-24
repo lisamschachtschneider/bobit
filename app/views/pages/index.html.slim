@@ -1,11 +1,11 @@
 body
 	ul.page-header
-		h3 
+		h3 = t('.song_uploader')
 		div.image-header
 			img src = "http://digitizor.com/wp-content/uploads/2011/05/cloud-music1.jpeg"
 
 	ul.main-content
-		h4 Recently Uploaded Songs
+		h4 = t('.recently_uploaded')
 	    ol#selector
 	    	li: a[href = "#" target = "_blank"] Telomere
 	    	li: a[href = "#" target = "_blank"] Curtains 2
