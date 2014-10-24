@@ -20,14 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  tagline: "Upload your music, get feedback, share with friends and family."
-  your_upvoted_songs: "Your Upvoted Songs"
-  your_saved_bands: "Bands You've Saved"
-  copyright: "Copyright 2014 LMS"
-  submit: "Submit"
-  about: "About"
-  made_in: "Made in Utrecht with love."
+  layouts:
+    application:
+      tagline: "Upload your music, get feedback, share with friends and family."
+      your_upvoted_songs: Your Upvoted Songs
+      your_saved_bands: Bands You've Saved
+      copyright: Copyright 2014 LMS
+      legal: Legal
+  general:
+    submit: "Submit"
+  pages: 
+    about:
+      title: About
+      description: Made in Utrecht with love.
   menu:
     home: Home
     bands: Bands
