@@ -1,4 +1,3 @@
 class Song < ActiveRecord::Base
-  mount_uploader :song, SongUploader
-
+  mount_uploader :file, SongUploader
 end

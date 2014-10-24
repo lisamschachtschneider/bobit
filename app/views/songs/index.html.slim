@@ -3,12 +3,15 @@ body
   h4 = t('.your_most_played')
   table
     tr
-      th Title
+      th Artist
       th Song Name
+      th
     - @songs.each do |song|
       tr
+        td =song.artist
         td =song.title
-        td =song.song
+        td
+          audio(controls src= song.file)
   h4 = t('.your_recent_tracks')
   ol
     li We live here
@@ -25,3 +28,4 @@ body
     li We
     li are
     li Weird
+
