@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @song = Song.new
   end
 
   def bands
