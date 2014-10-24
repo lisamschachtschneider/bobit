@@ -1,0 +1,37 @@
+html
+  head
+    = stylesheet_link_tag 'application', media: :all
+    = javascript_include_tag 'application'
+  	= csrf_meta_tags
+
+  body
+    - if flash.present?
+      - flash.each do |kind, msg| 
+      - content_tag :div, msg, class: kind
+ 
+  	div.row
+      div.large-2.columns
+        h6 = t('.your_saved_bands')
+        ul#selector
+          li: a [href = '#' target = '_blank'] Telomere
+          li: a [href = '#' target = '_blank'] Justin Timberlake
+      div.large-8.columns
+        h1: a[href = root_path] = t('.title')
+        h2 = t('.tagline')
+        ul.button-group.radius.even-4
+          li.first: a.button href = root_path = t('menu.home')
+          li.second: a.button href = 'bands#pages' = t('menu.bands')
+          li.third: a.button href = 'songs#pages' = t('menu.songs')
+          li.fourth: a.button href = 'about#pages' = t('menu.about')
+        = yield
+      div.large-2.columns
+        h6 = t('.your_upvoted_songs')
+        ul#selector
+          li: a [href = '#' target = '_blank'] Galatica
+          li: a [href = '#' target = '_blank'] Curtains 2
+    div.row
+      div.large-12.columns
+        div.footer
+        p = t('.copyright')
+        a [href = 'legal#pages' target = '_blank'] = t('.legal')
+      

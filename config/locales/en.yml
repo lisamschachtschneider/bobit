@@ -20,4 +20,40 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: Bobit!
+      tagline: "Upload your music, get feedback, share with friends and family."
+      your_upvoted_songs: Your Upvoted Songs
+      your_saved_bands: Bands You've Saved
+      copyright: Copyright 2014 LMS
+      legal: Legal
+  general:
+    submit: "Submit"
+  pages: 
+    about:
+      title: About
+      description: Made in Utrecht with love.
+    bands: 
+      recently_heard: Most Recently Heard
+      your_upvoted_bands: Bands You've Upvoted
+      your_downvoted_bands: Bands You've Downvoted
+      most_upvoted_bands: Most Upvoted Bands
+      most_downvoted_bands: Most Downvoted Bands
+    index:
+      song_uploader: Upload Your Song!
+      recently_uploaded: Recently Uploaded Songs
+    legal:
+      legal_disclaimer: Legal Disclaimers
+    songs:
+      title: Songs
+      your_most_played: Your Most Played Tracks
+      your_recent_tracks: Recently Heard Tracks
+      most_upvoted: Most Upvoted Tracks
+      most_downvoted: Most Downvoted Tracks
+  menu:
+    home: Home
+    bands: Bands
+    songs: Songs
+    about: About
+

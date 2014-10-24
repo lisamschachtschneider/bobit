@@ -1,0 +1,16 @@
+= form_for @song, :html => {:multipart => true} do |f|
+	div.field
+	 = f.error_messages
+	 = f.hidden_field :song_id
+
+	div.field
+	 = f.label :name
+	 = f.text_field :name
+
+	p
+	 = f.file_field :song
+
+	div.actions
+	 = f.submit = t('.submit')
+
+	
