@@ -1,0 +1,27 @@
+body
+  h3 = t('.title')
+  h4 = t('.your_most_played')
+  table
+    tr
+      th Title
+      th Song Name
+    - @songs.each do |song|
+      tr
+        td =song.title
+        td =song.song
+  h4 = t('.your_recent_tracks')
+  ol
+    li We live here
+    li I only listen
+    li To the same music
+    
+  h4 = t('.most_upvoted_tracks')
+  ol
+    li Bey
+    li Dey
+    li Jay
+  h4 = t('.most_downvoted_tracks')
+  ol
+    li We
+    li are
+    li Weird

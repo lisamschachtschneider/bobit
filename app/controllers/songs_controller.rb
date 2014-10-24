@@ -24,21 +24,13 @@ class SongsController < ApplicationController
   end
 
   def create
-    # @song = Song.new(params[:song])
     @song = Song.new(song_params)
-
-    if @song.save
-      flash[:notice] = "Your song was successfully uploaded!"
-      redirect_to root_path
-    else
-      flash[:alert] = "Your song was not uploaded!"
-      redirect_to "songs#pages"
-    end
+    @song.save
+    redirect_to songs_path
   end
 
   private
-
   def song_params
-    params.require(:song).permit(:name, :title)
+    params.require(:song).permit(:song, :title)
   end
 end

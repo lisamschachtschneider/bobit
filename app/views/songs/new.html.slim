@@ -1,0 +1,12 @@
+h2 Upload a new MP3
+= form_for :song, url: songs_path do |f|
+  p  
+    = f.label :title
+    = f.text_field :title
+  p
+    = f.label :song
+    = f.text_field :song
+  p
+    = f.file_field :song
+  p
+    = f.submit

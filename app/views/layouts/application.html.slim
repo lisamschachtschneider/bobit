@@ -5,9 +5,9 @@ html
   	= csrf_meta_tags
 
   body
-    - if flash.present?
-      - flash.each do |kind, msg| 
-      - content_tag :div, msg, class: kind
+    /*- if flash.present?
+      /*- flash.each do |kind, msg| 
+      /*- content_tag :div, msg, class: kind
  
   	div.row
       div.large-2.columns
