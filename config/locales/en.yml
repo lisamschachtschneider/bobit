@@ -45,8 +45,9 @@ en:
       recently_uploaded: Recently Uploaded Songs
     legal:
       legal_disclaimer: Legal Disclaimers
-    songs:
-      title: Songs
+  songs:
+    index:
+      title: Songs Homepage
       your_most_played: Your Most Played Tracks
       your_recent_tracks: Recently Heard Tracks
       most_upvoted: Most Upvoted Tracks
