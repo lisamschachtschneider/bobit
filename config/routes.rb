@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
-  get 'songs/index'
-
-  get 'songs/upload'
-
-  get 'songs/delete'
-
   root 'pages#index'
   
   get 'about' => 'pages#about'
   get 'bands' => 'pages#bands'
-  get 'songs' => 'pages#songs'
   get 'legal' => 'pages#legal'
+
   resources :songs
-  
+  get 'songs/upload'
+  get 'songs/delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -26,7 +22,6 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
 
   # Example resource route with options:
   #   resources :products do
@@ -41,7 +36,7 @@ Rails.application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-  #   resources :products do
+  #  resources :products do
   #     resources :comments, :sales
   #     resource :seller
   #   end

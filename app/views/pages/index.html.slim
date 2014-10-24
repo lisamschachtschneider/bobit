@@ -1,16 +1,13 @@
 body
-	ul class = "page-header"
-		h3 
-		div class = "image-header"
+	ul.page-header
+		h3 = t('.song_uploader')
+		= render 'form'
+		div.image-header
 			img src = "http://digitizor.com/wp-content/uploads/2011/05/cloud-music1.jpeg"
 
-	ul class = "main-content"
-		h4 Upload a song
-		= render 'form'
-		h4 Recently Uploaded Songs
+	ul.main-content
+		h4 = t('.recently_uploaded')
 	    ol#selector
 	    	li: a[href = "#" target = "_blank"] Telomere
 	    	li: a[href = "#" target = "_blank"] Curtains 2
 	    	li: a[href = "#" target = "_blank"] Galactica
-
-

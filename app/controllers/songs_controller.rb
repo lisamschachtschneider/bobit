@@ -1,5 +1,4 @@
 class SongsController < ApplicationController
-#attr_accessible :song_id, :name
 
   def index
     @songs = Song.all
