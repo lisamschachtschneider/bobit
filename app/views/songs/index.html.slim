@@ -1,6 +1,8 @@
 body
   h3 = t('.title')
-  h4 = t('.your_most_played')
+  h4 =t('.song_uploader')
+  p =link_to 'Song Uploader', new_song_path
+  h4 = t('.recently_uploaded')
   table
     tr
       th Artist
