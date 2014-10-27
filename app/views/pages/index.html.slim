@@ -1,13 +1,20 @@
-body
-	ul.page-header
-		h3 = t('.song_uploader')
-		= link_to 'Upload a Song', new_song_path
-		div.image-header
-			img src = "http://digitizor.com/wp-content/uploads/2011/05/cloud-music1.jpeg"
+.page-header
+	h3 = t('.song_uploader')
+	= link_to 'Upload a Song', new_song_path
+	div.image-header
+		img src = "http://digitizor.com/wp-content/uploads/2011/05/cloud-music1.jpeg"
 
-	ul.main-content
-		h4 = t('.recently_uploaded')
-	    ol#selector
-	    	li: a[href = "#" target = "_blank"] Telomere
-	    	li: a[href = "#" target = "_blank"] Curtains 2
-	    	li: a[href = "#" target = "_blank"] Galactica
+.main-content
+	h4 = t('.recently_uploaded')
+
+	table
+		tr
+			th Artist
+			th Song Name
+		- @songs.each do |song|
+			tr
+				td =song.artist
+				td =song.title
+				td
+					audio(controls src= song.file)
+				td =link_to 'Show', song_path(song)
