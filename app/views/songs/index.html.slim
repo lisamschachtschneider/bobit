@@ -4,8 +4,8 @@ p =link_to 'Song Uploader', new_song_path
 h4 = t('.recently_uploaded')
 table
   tr
-    th Artist
-    th Song Name
+    th =t('.artist')
+    th =t('.song_name')
     th
   - @songs.each do |song|
     tr

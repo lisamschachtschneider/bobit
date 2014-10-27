@@ -9,9 +9,6 @@ class SongsController < ApplicationController
     end
   end
 
-  def delete
-  end
-
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
@@ -46,9 +43,6 @@ class SongsController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def upload
   end
 
   private
