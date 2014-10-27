@@ -12,6 +12,9 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
   end
 
+  def edit
+    @song = Song.find(params[:id])
+  end
 
   def upload
   end
@@ -25,8 +28,12 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    @song.save
-    redirect_to songs_path
+
+    if @song.save
+      redirect_to songs_path
+    else
+      render 'new'
+    end
   end
 
   private
