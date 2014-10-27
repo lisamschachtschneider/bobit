@@ -14,6 +14,8 @@ body
         td =song.title
         td
           audio(controls src= song.file)
+        td =link_to 'Show', song_path(song)
+        td =link_to 'Edit', edit_song_path(song)
   h4 = t('.your_recent_tracks')
   ol
     li We live here

@@ -3,4 +3,7 @@ p
   - @song.title
 p
   strong Name:
-  - @song.song 
+  - @song.artist 
+
+p =link_to 'Back', songs_path
+p =link_to 'Edit', edit_song_path(@song)

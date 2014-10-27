@@ -1,17 +1,19 @@
-h2 Upload a new MP3
-= form_for @song, @song.upload :html => {:multipart => true} do |f|
-	div.field
-	 = f.error_messages
-	 = f.hidden_field :song_id
+= form_for @song do |f|
+  - if @song.errors.any?
+    .error_explanation
+    h3 =pluralize(@song.errors.count, "error") 
+    h3 prohibited this article from being saved:
+    ul 
+      =@song.errors.full_messages.each do |msg|
+      li - msg
 
-	div.field
-	 = f.label :name
-	 = f.text_field :name
-
-	p
-	 = f.file_field :song
-
-	div.actions
-	 = f.submit = t('.submit')
-
-	
+  p  
+    = f.label :artist
+    = f.text_field :artist
+  p
+    = f.label :title
+    = f.text_field :title
+  p
+    = f.file_field :file
+  p
+    = f.submit

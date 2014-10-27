@@ -1,22 +1,4 @@
 h2 Upload a new MP3
-= form_for :song, url: songs_path do |f|
-  - if @song.errors.any?
-    .error_explanation
-    h3 =pluralize(@song.errors.count, "error") 
-    h3 prohibited this article from being saved:
-    ul 
-      li =@song.errors.full_messages.each do |msg|
-        - msg
-
-  p  
-    = f.label :artist
-    = f.text_field :artist
-  p
-    = f.label :title
-    = f.text_field :title
-  p
-    = f.file_field :file
-  p
-    = f.submit
+=render 'form'
 
 =link_to 'Back', songs_path
