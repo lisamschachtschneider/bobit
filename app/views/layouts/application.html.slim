@@ -20,9 +20,9 @@ html
         h2 = t('.tagline')
         ul.button-group.radius.even-4
           li.first: a.button href = root_path = t('menu.home')
-          li.second: a.button href = 'bands#pages' = t('menu.bands')
-          li.third: a.button href = 'songs#pages' = t('menu.songs')
-          li.fourth: a.button href = 'about#pages' = t('menu.about')
+          li.second: a.button href = bands_path = t('menu.bands')
+          li.third: a.button href = songs_path = t('menu.songs')
+          li.fourth: a.button href = about_path = t('menu.about')
         = yield
       div.large-2.columns
         h6 = t('.your_upvoted_songs')
