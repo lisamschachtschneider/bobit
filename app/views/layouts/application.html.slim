@@ -10,12 +10,12 @@ html
       /*- content_tag :div, msg, class: kind
  
   	div.row
-      div.large-2.columns
+      .large-2.columns
         h6 = t('.your_saved_bands')
         ul#selector
           li: a [href = '#' target = '_blank'] Telomere
           li: a [href = '#' target = '_blank'] Justin Timberlake
-      div.large-8.columns
+      .large-8.columns
         h1: a[href = root_path] = t('.title')
         h2 = t('.tagline')
         ul.button-group.radius.even-4
@@ -24,14 +24,14 @@ html
           li.third: a.button href = songs_path = t('menu.songs')
           li.fourth: a.button href = about_path = t('menu.about')
         = yield
-      div.large-2.columns
+      .large-2.columns
         h6 = t('.your_upvoted_songs')
         ul#selector
           li: a [href = '#' target = '_blank'] Galatica
           li: a [href = '#' target = '_blank'] Curtains 2
-    div.row
-      div.large-12.columns
-        div.footer
+    .row
+      .large-12.columns
+        .footer
         p = t('.copyright')
         a [href = 'legal#pages' target = '_blank'] = t('.legal')
       
