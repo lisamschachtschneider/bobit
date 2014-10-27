@@ -8,7 +8,7 @@ p
   =@song.title
 
 p
-  audio(controls src= @song.file)
+  audio(controls src =@song.file)
 
   p =link_to 'Back', songs_path
   p =link_to 'Edit', edit_song_path(@song)
