@@ -1,36 +1,34 @@
-body
-  h3 = t('.title')
-  h4 =t('.song_uploader')
-  p =link_to 'Song Uploader', new_song_path
-  h4 = t('.recently_uploaded')
-  table
+h3 = t('.title')
+h4 =t('.song_uploader')
+p =link_to 'Song Uploader', new_song_path
+h4 = t('.recently_uploaded')
+table
+  tr
+    th Artist
+    th Song Name
+    th
+  - @songs.each do |song|
     tr
-      th Artist
-      th Song Name
-      th
-    - @songs.each do |song|
-      tr
-        td =song.artist
-        td =song.title
-        td
-          audio(controls src= song.file)
-        td =link_to 'Show', song_path(song)
-        td =link_to 'Edit', edit_song_path(song)
-        td =link_to 'Destroy', song_path(song), method: :delete, data: { confirm: 'Are your sure?' }
-  h4 = t('.your_recent_tracks')
-  ol
-    li We live here
-    li I only listen
-    li To the same music
-    
-  h4 = t('.most_upvoted_tracks')
-  ol
-    li Bey
-    li Dey
-    li Jay
-  h4 = t('.most_downvoted_tracks')
-  ol
-    li We
-    li are
-    li Weird
-
+      td =song.artist
+      td =song.title
+      td
+        audio(controls src= song.file)
+      td =link_to 'Show', song_path(song)
+      td =link_to 'Edit', edit_song_path(song)
+      td =link_to 'Destroy', song_path(song), method: :delete, data: { confirm: 'Are your sure?' }
+h4 = t('.your_recent_tracks')
+ol
+  li We live here
+  li I only listen
+  li To the same music
+  
+h4 = t('.most_upvoted_tracks')
+ol
+  li Bey
+  li Dey
+  li Jay
+h4 = t('.most_downvoted_tracks')
+ol
+  li We
+  li are
+  li Weird

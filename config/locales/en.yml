@@ -41,11 +41,21 @@ en:
       most_upvoted_bands: Most Upvoted Bands
       most_downvoted_bands: Most Downvoted Bands
     index:
+      artist: Artist
+      song_name: Song Name
       song_uploader: Upload Your Song!
       recently_uploaded: Recently Uploaded Songs
     legal:
       legal_disclaimer: Legal Disclaimers
   songs:
+    show:
+      song_page: Song Page
+      song_artist: Artist 
+      song_title: Song Title 
+    new:
+      upload_new_song: Upload a new MP3
+    edit:
+      edit_song: Edit Your Song
     index:
       title: Songs Homepage
       your_most_played: Your Most Played Tracks

@@ -9,8 +9,8 @@
 
 	table
 		tr
-			th Artist
-			th Song Name
+			th = t('.artist')
+			th = t('.song_name')
 		- @songs.each do |song|
 			tr
 				td =song.artist
