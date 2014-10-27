@@ -2,8 +2,4 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 # If you run it again it will create the same objects again in the database
 # Examples:
-#
-  # cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-  # Mayor.create(name: 'Emanuel', city: cities.first)
-
 #Song.create(artist: 'Kanye West', title: 'The Kim or something song')

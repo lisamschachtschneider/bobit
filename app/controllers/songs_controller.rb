@@ -1,32 +1,12 @@
 class SongsController < ApplicationController
 
-  def index
-    @songs = Song.all
-  end
-
-  def list
-    @songs = Song.find(:all)
-  end
-
-  def show
-    @song = Song.find(params[:id])
-  end
-
-  def edit
-    @song = Song.find(params[:id])
-  end
-
-  def update
-    @song = Song.find(params[:id])
-
-    if @song.update(song_params)
-      redirect_to @song
+  def create
+    @song = Song.new(song_params)
+    if @song.save
+      redirect_to songs_path
     else
-      render 'edit'
+      render 'new'
     end
-  end
-
-  def upload
   end
 
   def delete
@@ -38,20 +18,37 @@ class SongsController < ApplicationController
 
     redirect_to songs_path
   end
-  
+
+  def edit
+    @song = Song.find(params[:id])
+  end
+
+  def index
+    @songs = Song.all
+  end
+
+  def list
+    @songs = Song.find(:all)
+  end
 
   def new
     @song = Song.new
   end
 
-  def create
-    @song = Song.new(song_params)
+  def show
+    @song = Song.find(params[:id])
+  end
 
-    if @song.save
-      redirect_to songs_path
+  def update
+    @song = Song.find(params[:id])
+    if @song.update(song_params)
+      redirect_to @song
     else
-      render 'new'
+      render 'edit'
     end
+  end
+
+  def upload
   end
 
   private
@@ -59,4 +56,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:artist, :title, :file)
   end
 end
-
