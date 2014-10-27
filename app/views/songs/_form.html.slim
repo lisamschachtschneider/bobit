@@ -2,7 +2,7 @@
   - if @song.errors.any?
     .error_explanation
     h3 =pluralize(@song.errors.count, "error") 
-    h3 prohibited this article from being saved:
+    h3 =t('.prohibited_from_save')
     ul 
       =@song.errors.full_messages.each do |msg|
       li - msg

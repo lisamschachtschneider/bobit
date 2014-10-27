@@ -20,13 +20,15 @@ en:
       most_upvoted_bands: Most Upvoted Bands
       most_downvoted_bands: Most Downvoted Bands
     index:
+      song_uploader: Upload Your Song!
       artist: Artist
       song_name: Song Name
-      song_uploader: Upload Your Song!
       recently_uploaded: Recently Uploaded Songs
     legal:
       legal_disclaimer: Legal Disclaimers
   songs:
+    _form:
+      prohibited_from_save: prohibited this article from being saved:
     show:
       song_page: Song Page
       song_artist: Artist 
