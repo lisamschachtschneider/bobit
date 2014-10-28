@@ -20,6 +20,7 @@ en:
       most_upvoted_bands: Most Upvoted Bands
       most_downvoted_bands: Most Downvoted Bands
     index:
+      upload_song: Upload a Song
       song_uploader: Upload Your Song!
       artist: Artist
       song_name: Song Name
