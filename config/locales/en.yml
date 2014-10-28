@@ -27,8 +27,8 @@ en:
     legal:
       legal_disclaimer: Legal Disclaimers
   songs:
-    _form:
-      prohibited_from_save: prohibited this article from being saved:
+    form:
+      prohibited_from_save: Prohibited This Song From Being Saved
     show:
       song_page: Song Page
       song_artist: Artist 
@@ -40,6 +40,7 @@ en:
     index:
       title: Songs Homepage
       aritst: Artist
+      upload_song: Upload your Song!
       song_name: Song Name
       your_most_played: Your Most Played Tracks
       your_recent_tracks: Recently Heard Tracks
