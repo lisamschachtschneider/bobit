@@ -24,10 +24,6 @@ class SongsController < ApplicationController
     @songs = Song.all
   end
 
-  def list
-    @songs = Song.find(:all)
-  end
-
   def new
     @song = Song.new
   end
