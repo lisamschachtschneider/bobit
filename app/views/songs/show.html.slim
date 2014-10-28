@@ -1,17 +1,17 @@
-h4 = t('.song_page')
-table
-  tr
-    th =t('.song_artist')
-    th =t('.song_title')
-    th =t('.created_at')
-    th =t('.updated_at')
-    tr
-      td =@song.artist
-      td =@song.title
-      td =timeago(@song.created_at)
-      td =timeago(@song.updated_at)
-      td 
-        audio(controls src= @song.file)
-      td =link_to t('.back'), songs_path
-      td =link_to t('.edit'), edit_song_path(@song)
-      td =link_to t('.destroy'), song_path(@song), method: :delete, data: { confirm: 'Are you sure?' }
+h4 =t('.song_page')
+.show_table
+  .table
+    h6 =t('.song_artist')
+    p =@song.artist
+    h6 =t('.song_title')
+    p =@song.title
+    h6 =t('.created_at')
+    p =timeago(@song.created_at)
+    h6 =t('.updated_at')
+    p =timeago(@song.updated_at)
+  .audio 
+    audio(controls src= @song.file)
+  .links
+      p =link_to t('.back'), songs_path
+      p =link_to t('.edit'), edit_song_path(@song)
+      p =link_to t('.destroy'), song_path(@song), method: :delete, data: { confirm: 'Are you sure?' }
