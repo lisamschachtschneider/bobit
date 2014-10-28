@@ -1,7 +1,7 @@
 = form_for @song do |f|
   - if @song.errors.any?
     .error_explanation
-      h5> =pluralize(@song.errors.count, "Error") 
+      h5> =pluralize(@song.errors.count, t('.error')) 
       h5 =t('.prohibited_from_save')
       ul 
         -@song.errors.full_messages.each do |msg|

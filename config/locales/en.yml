@@ -29,6 +29,7 @@ en:
       legal_disclaimer: Legal Disclaimers
   songs:
     form:
+      error: Errors
       prohibited_from_save: Prohibited This Song From Being Saved
     show:
       song_page: Song Page
