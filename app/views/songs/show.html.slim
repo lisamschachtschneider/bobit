@@ -8,8 +8,8 @@ table
     tr
       td =@song.artist
       td =@song.title
-      td =@song.created_at
-      td =@song.updated_at
+      td =timeago(@song.created_at)
+      td =timeago(@song.updated_at)
       td 
         audio(controls src= @song.file)
       td =link_to t('.back'), songs_path
