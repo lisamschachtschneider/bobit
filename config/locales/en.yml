@@ -25,7 +25,7 @@ en:
       artist: Artist
       song_name: Song Name
       recently_uploaded: Recently Uploaded Songs
-      show: Shows
+      show: Show
     legal:
       legal_disclaimer: Legal Disclaimers
   songs:
@@ -36,6 +36,8 @@ en:
       song_page: Song Page
       song_artist: Artist 
       song_title: Song Title
+      created_at: Created at
+      updated_at: Updated at
       edit: Edit
       destroy: Delete
       back: Back
