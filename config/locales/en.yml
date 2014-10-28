@@ -44,7 +44,7 @@ en:
     index:
       title: Songs Homepage
       aritst: Artist
-      upload_song: Upload your Song!
+      upload_song: Upload Your Song!
       song_name: Song Name
       your_most_played: Your Most Played Tracks
       your_recent_tracks: Recently Heard Tracks
