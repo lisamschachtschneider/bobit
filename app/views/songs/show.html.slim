@@ -1,16 +1,13 @@
 h4 = t('.song_page')
-p
-  strong = t('.song_artist') 
-  =@song.artist
-p
-  strong = t('.song_title') 
-  =@song.title
-p
-  audio(controls src =@song.file)
-p 
-  =link_to 'Back', songs_path
-p 
-  =link_to 'Edit', edit_song_path(@song)
-p 
-  =link_to 'Destroy', song_path(@song), method: :delete, data: { confirm: 'Are you sure?' }
-  
+table
+  tr
+    th =t('.song_artist')
+    th =t('.song_title')
+    tr
+      td =@song.artist
+      td =@song.title
+      td 
+        audio(controls src= @song.file)
+      td =link_to 'Back', songs_path
+      td =link_to 'Edit', edit_song_path(@song)
+      td =link_to 'Destroy', song_path(@song), method: :delete, data: { confirm: 'Are you sure?' }
