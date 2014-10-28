@@ -25,6 +25,7 @@ en:
       artist: Artist
       song_name: Song Name
       recently_uploaded: Recently Uploaded Songs
+      show: Shows
     legal:
       legal_disclaimer: Legal Disclaimers
   songs:
