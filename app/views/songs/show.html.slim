@@ -8,6 +8,6 @@ table
       td =@song.title
       td 
         audio(controls src= @song.file)
-      td =link_to 'Back', songs_path
-      td =link_to 'Edit', edit_song_path(@song)
-      td =link_to 'Destroy', song_path(@song), method: :delete, data: { confirm: 'Are you sure?' }
+      td =link_to t('.back'), songs_path
+      td =link_to t('.edit'), edit_song_path(@song)
+      td =link_to t('.destroy'), song_path(@song), method: :delete, data: { confirm: 'Are you sure?' }

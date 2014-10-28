@@ -32,7 +32,10 @@ en:
     show:
       song_page: Song Page
       song_artist: Artist 
-      song_title: Song Title 
+      song_title: Song Title
+      edit: Edit
+      destroy: Delete
+      back: Back
     new:
       upload_new_song: Upload a new MP3
     edit:
