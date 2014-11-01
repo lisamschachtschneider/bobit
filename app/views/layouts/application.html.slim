@@ -16,10 +16,10 @@ html
         h1 =link_to t('.title'), root_path
         h2 = t('.tagline')
         ul.button-group.radius.even-4
-          li.button =link_to t('menu.home'), root_path
-          li.button =link_to t('menu.bands'), bands_path
-          li.button =link_to t('menu.songs'), songs_path
-          li.button =link_to t('menu.about'), about_path
+          =link_to t('menu.home'), root_path, id: "li", class: "button"
+          =link_to t('menu.bands'), bands_path, id: "li", class: "button"
+          =link_to t('menu.songs'), songs_path, id: "li", class: "button"
+          =link_to t('menu.about'), about_path, id: "li", class: "button"
         = yield
       .large-2.columns
         h6 = t('.your_upvoted_songs')
