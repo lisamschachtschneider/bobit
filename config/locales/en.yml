@@ -1,4 +1,14 @@
 en:
+  activerecord:
+    models:
+      song: Songs
+    attributes:
+      song:
+        artist: Artist
+        title: Song Title
+        created_at: Created at
+        updated_at: Updated at
+        file: File name
   layouts:
     application:
       title: Bobit!
@@ -34,10 +44,6 @@ en:
       prohibited_from_save: Prohibited This Song From Being Saved
     show:
       song_page: Song Page
-      song_artist: Artist 
-      song_title: Song Title
-      created_at: Created at
-      updated_at: Updated at
       edit: Edit
       destroy: Delete
       back: Back

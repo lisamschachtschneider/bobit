@@ -1,13 +1,13 @@
 h4 =t('.song_page')
 .show_table
   .table
-    h6 =t('.song_artist')
+    h6 =t(Song.human_attribute_name("artist"))
     p =@song.artist
-    h6 =t('.song_title')
+    h6 =t(Song.human_attribute_name("title"))
     p =@song.title
-    h6 =t('.created_at')
+    h6 =t(Song.human_attribute_name("created_at"))
     p =timeago(@song.created_at)
-    h6 =t('.updated_at')
+    h6 =t(Song.human_attribute_name("updated_at"))
     p =timeago(@song.updated_at)
   .audio 
     audio(controls src= @song.file)
