@@ -78,6 +78,7 @@ en:
     new:
       upload_new_song: Upload a new MP3
     edit:
+      back: Back
       edit_song: Edit Your Song
     index:
       title: Songs Homepage
