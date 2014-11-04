@@ -7,12 +7,7 @@ html
   	= csrf_meta_tags
   body
   	.row
-      .large-2.columns
-        h6 = t('.your_saved_bands')
-        ul#selector
-          li: a [href = '#' target = '_blank'] Telomere
-          li: a [href = '#' target = '_blank'] Justin Timberlake
-      .large-8.columns
+      .large-12.columns
         h1 =link_to t('.title'), root_path
         h2 = t('.tagline')
         ul.button-group.radius.even-4
@@ -21,11 +16,6 @@ html
           =link_to t('menu.songs'), songs_path, class: 'button'
           =link_to t('menu.about'), about_path, class: 'button'
         = yield
-      .large-2.columns
-        h6 = t('.your_upvoted_songs')
-        ul#selector
-          li: a [href = '#' target = '_blank'] Galatica
-          li: a [href = '#' target = '_blank'] Curtains 2
     .row
       .large-12.columns
         .footer
