@@ -89,6 +89,9 @@ en:
       your_recent_tracks: Recently Heard Tracks
       most_upvoted: Most Upvoted Tracks
       most_downvoted: Most Downvoted Tracks
+      show: Show
+      edit: Edit
+      destroy: Delete
   menu:
     home: Home
     bands: Bands

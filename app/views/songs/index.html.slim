@@ -13,21 +13,6 @@ table
       td =song.title
       td
         audio(controls src= song.file)
-      td =link_to 'Show', song_path(song)
-      td =link_to 'Edit', edit_song_path(song)
-      td =link_to 'Destroy', song_path(song), method: :delete, data: { confirm: 'Are your sure?' }
-h4 = t('.your_recent_tracks')
-ol
-  li We live here
-  li I only listen
-  li To the same music
-h4 = t('.most_upvoted_tracks')
-ol
-  li Bey
-  li Dey
-  li Jay
-h4 = t('.most_downvoted_tracks')
-ol
-  li We
-  li are
-  li Weird
+      td =link_to t('.show'), song_path(song)
+      td =link_to t('.edit'), edit_song_path(song)
+      td =link_to t('.destroy'), song_path(song), method: :delete, data: { confirm: 'Are your sure?' }
