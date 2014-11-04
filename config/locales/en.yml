@@ -46,6 +46,9 @@ en:
     legal:
       legal_disclaimer: Legal Disclaimers
   bands:
+    new:
+      new_band: Create a new band
+      back: Back
     show:
       welcome: Welcome to the Bands Page
       back: Back
