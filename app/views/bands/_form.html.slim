@@ -1,0 +1,19 @@
+=form_for @band do |b|
+  -if @band.errors.any?
+    .error_explanation
+      h5> =pluralize(@band.errors.count, 'Errors')
+      h5 Prohibited from save
+      ul
+        -@band.errors.full_messages.each do |msg|
+          li =msg
+  p
+    =b.label :name
+    =b.text_field :name
+  p
+    =b.label :description
+    =b.text_field :description
+  p
+    =b.label :news
+    =b.text_field :news
+  p
+    =b.submit

@@ -1,0 +1,18 @@
+h3 Welcome to my Bands Page!
+.new_band
+  h4 =link_to 'Create a new band', new_band_path
+h5 New Bands!
+table
+  tr 
+    th Band Name
+    th Description, tagline, etc.
+    th Current News
+  - @bands.each do |band|
+    tr
+      td =band.name
+      td =band.description
+      td =band.news
+      td =link_to 'Show', band_path(band)
+      td =link_to 'Edit', edit_band_path(band)
+      td =link_to 'Destroy', band_path(band), method: :delete, data: { confirm: 'Are you sure?' }
+      
