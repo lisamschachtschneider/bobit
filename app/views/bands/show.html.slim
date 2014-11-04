@@ -1,17 +1,16 @@
-h3 Welcome to my Bands Page!
+h3 =t('.welcome')
 .show_bands
-  h6 Artist
+  h6 =t(Band.human_attribute_name('name'))
   p =@band.name
-  h6 Description
+  h6 =t(Band.human_attribute_name('description'))
   p =@band.description
-  h6 News
+  h6 =t(Band.human_attribute_name('news'))
   p =@band.news
-  h6 Created At
+  h6 =t(Band.human_attribute_name('created_at'))
   p =timeago(@band.created_at)
-  h6 Updated At
+  h6 =t(Band.human_attribute_name('updated_at'))
   p =timeago(@band.updated_at)
 .links
-  p =link_to 'Back', :back
-  p =link_to 'Edit', edit_band_path(@band)
-  p =link_to 'Destroy', band_path(@band), method: :delete, data: { confirm: 'Are you sure?' }
-  
+  p =link_to t('.back'), :back
+  p =link_to t('.edit'), edit_band_path(@band)
+  p =link_to t('.destroy'), band_path(@band), method: :delete, data: { confirm: 'Are you sure?' }

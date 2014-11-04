@@ -2,6 +2,7 @@ en:
   activerecord:
     models:
       song: Songs
+      band: Bands
     attributes:
       song:
         artist: Artist
@@ -9,6 +10,12 @@ en:
         created_at: Created at
         updated_at: Updated at
         file: File name
+      band:
+        name: Artist Name
+        description: description
+        news: Current news
+        created_at: Created at
+        updated_at: Updated at
   layouts:
     application:
       title: Bobit!
@@ -38,6 +45,12 @@ en:
       show: Show
     legal:
       legal_disclaimer: Legal Disclaimers
+  bands:
+    show:
+      welcome: Welcome to the Bands Page
+      back: Back
+      edit: Edit
+      destroy: Delete
   songs:
     form:
       error: Errors
