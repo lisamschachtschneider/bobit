@@ -1,18 +1,16 @@
-h3 Welcome to my Bands Page!
+h3 =t('.bands_homepage')
 .new_band
-  h4 =link_to 'Create a new band', new_band_path
-h5 New Bands!
+  h4 =link_to t('.create_band'), new_band_path
+h5 =t('.new_band')
 table
   tr 
-    th Band Name
-    th Description, tagline, etc.
-    th Current News
+    th =t('.band_name')
+    th =t('.description')
   - @bands.each do |band|
     tr
       td =band.name
       td =band.description
-      td =band.news
-      td =link_to 'Show', band_path(band)
-      td =link_to 'Edit', edit_band_path(band)
-      td =link_to 'Destroy', band_path(band), method: :delete, data: { confirm: 'Are you sure?' }
+      td =link_to t('.show'), band_path(band)
+      td =link_to t('.edit'), edit_band_path(band)
+      td =link_to t('.destroy'), band_path(band), method: :delete, data: { confirm: 'Are you sure?' }
       

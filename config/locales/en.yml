@@ -46,6 +46,15 @@ en:
     legal:
       legal_disclaimer: Legal Disclaimers
   bands:
+    index:
+      bands_homepage: Bands Homepage
+      create_band: Create a New Band
+      new_band: New Band
+      band_name: Band Name
+      description: "Description, tagline, etc."
+      show: Show more
+      edit: Edit
+      destroy: Delete
     new:
       new_band: Create a new band
       back: Back
