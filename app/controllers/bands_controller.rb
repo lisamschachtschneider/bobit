@@ -39,7 +39,6 @@ class BandsController < ApplicationController
       render 'edit'
     end
   end
-
 private
   def band_params
     params.require(:band).permit(:name, :description, :news)
