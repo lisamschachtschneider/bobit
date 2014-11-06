@@ -15,5 +15,13 @@
   p
     =b.label :news
     =b.text_field :news
-  p
+    h6 Does your band have any songs yet?
+    p
+      =b.fields_for :songs do |songs_form|
+
+        =songs_form.label :title
+        =songs_form.text_field :title
+
+        =songs_form.file_field :file
+  p      
     =b.submit

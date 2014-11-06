@@ -25,6 +25,7 @@ class BandsController < ApplicationController
 
   def new
     @band = Band.new
+    2.times{ @band.songs.build}
   end
 
   def show
@@ -41,6 +42,6 @@ class BandsController < ApplicationController
   end
 private
   def band_params
-    params.require(:band).permit(:name, :description, :news)
+    params.require(:band).permit(:name, :description, :news, :songs_attributes => [:id, :artist, :title, :created_at, :updated_at, :file])
   end
 end
