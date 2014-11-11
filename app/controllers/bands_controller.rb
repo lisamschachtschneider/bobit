@@ -34,7 +34,7 @@ class BandsController < ApplicationController
 
   def update
     @band = Band.find(params[:id])
-    if @band.update(band_params)
+    if @band.update_attributes(band_params)
       redirect_to @band
     else
       render 'edit'
@@ -42,6 +42,6 @@ class BandsController < ApplicationController
   end
 private
   def band_params
-    params.require(:band).permit(:name, :description, :news, :songs_attributes => [:id, :artist, :title, :created_at, :updated_at, :file])
+    params.require(:band).permit(:name, :description, :news, :songs_attributes => [:title, :file])
   end
 end
