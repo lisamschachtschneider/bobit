@@ -3,12 +3,6 @@ class PagesController < ApplicationController
     @songs = Song.all
   end
 
-  def bands
-  end
-
-  def songs
-  end
-
   def about
   end
   
