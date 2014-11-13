@@ -93,6 +93,8 @@ en:
       show: Show
       edit: Edit
       destroy: Delete
+  playlists:
+    new_playlist: Create a New Playlist
   menu:
     home: Home
     bands: Bands
