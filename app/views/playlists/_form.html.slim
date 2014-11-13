@@ -1,0 +1,15 @@
+=form_for @playlist do |p|
+  -if @playlist.errors.any?
+    .error_explanation
+      h5> =pluralize(@playlist.errors.count, t('.error'))
+      h5 =t('prohibited_from_save')
+      ul
+        -@playlist.errors.full_messages.each do |msg|
+          li =msg
+  p
+    =p.label :title
+    =p.text_field :title
+  p
+    =p collection_check_boxes(:playlist, :song_ids, @songs, :id, :song_by_name)
+  p
+    =p.submit
