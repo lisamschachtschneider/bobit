@@ -4,12 +4,10 @@ h3 = t('.title')
 h5 = t('.recently_uploaded')
 table
   tr
-    th =t('.artist')
     th =t('.song_name')
     th
   - @songs.each do |song|
     tr
-      td =song.artist
       td =song.title
       td
         audio(controls src= song.file)
