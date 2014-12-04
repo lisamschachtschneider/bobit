@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113152555) do
+ActiveRecord::Schema.define(version: 20141111100700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,14 +24,6 @@ ActiveRecord::Schema.define(version: 20141113152555) do
     t.datetime "updated_at"
   end
 
-  create_table "bands_songs", id: false, force: true do |t|
-    t.integer "band_id", null: false
-    t.integer "song_id", null: false
-  end
-
-  add_index "bands_songs", ["band_id"], name: "index_bands_songs_on_band_id", using: :btree
-  add_index "bands_songs", ["song_id"], name: "index_bands_songs_on_song_id", using: :btree
-
   create_table "playlists", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
@@ -39,12 +31,12 @@ ActiveRecord::Schema.define(version: 20141113152555) do
   end
 
   create_table "songs", force: true do |t|
-    t.string   "artist"
     t.string   "title"
+    t.string   "file"
+    t.integer  "audioable_id"
+    t.string   "audioable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "file"
-    t.integer  "playlist_id"
   end
 
 end
