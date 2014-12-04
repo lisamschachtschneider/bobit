@@ -6,7 +6,7 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.new(playlist_params)
-    if @playlist.save
+    if @playlist.songs.save
       redirect_to playlists_path
     else
       render 'new'
@@ -26,6 +26,6 @@ class PlaylistsController < ApplicationController
 
 private
   def playlist_params
-    params.require(:playlist).permit(:title, :song_attributes => [:title, :file])
+    params.require(:playlist).permit(:title, song_params: [:id, :title, :file])
   end
 end
