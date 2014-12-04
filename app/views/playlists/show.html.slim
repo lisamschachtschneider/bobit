@@ -1,0 +1,15 @@
+h4 Playlist Page
+.show_table
+  .table
+    h6 =t(Playlist.human_attribute_name('title'))
+    p =@playlist.title
+    h6 =t(Playlist.human_attribute_name('created_at'))
+    p =timeago(@playlist.created_at)
+    h6 =t(Playlist.human_attribute_name('updated_at'))
+    p =timeago(@playlist.updated_at)
+  .audio 
+    audio(controls src= @song)
+  .links
+      p =link_to t('.back'), playlists_path
+      p =link_to t('.edit'), edit_playlist_path(@playlist)
+      p =link_to t('.destroy'), playlist_path(@playlist), method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,4 +1,4 @@
-=form_for @playlist do |p|
+=form_for([@playlist]) do |p|
   -if @playlist.errors.any?
     .error_explanation
       h5> =pluralize(@playlist.errors.count, t('.error'))
@@ -10,6 +10,12 @@
     =p.label :title
     =p.text_field :title
   p
-    =p collection_check_boxes(:playlist, :song_ids, @songs, :id, :song_by_name)
+    =p collection_check_boxes(:playlist, :song_ids, @songs, :id, :song_by_title) do |p|
+        -p.label { p.check_box }
+  p
+    =p.fields_for :songs do |s|
+      -if s.object.active?
+        =s.text_field :title
+        =s.file_field :file
   p
     =p.submit
