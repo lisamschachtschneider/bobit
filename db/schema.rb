@@ -36,13 +36,10 @@ ActiveRecord::Schema.define(version: 20141204091315) do
     t.datetime "updated_at"
   end
 
-  create_table "playlists_songs", force: true do |t|
+  create_table "playlists_songs", id: false, force: true do |t|
     t.integer "song_id"
     t.integer "playlist_id"
   end
-
-  add_index "playlists_songs", ["playlist_id"], name: "index_playlists_songs_on_playlist_id", using: :btree
-  add_index "playlists_songs", ["song_id"], name: "index_playlists_songs_on_song_id", using: :btree
 
   create_table "songs", force: true do |t|
     t.string   "title"
