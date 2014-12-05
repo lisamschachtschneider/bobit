@@ -1,5 +1,5 @@
-= form_for @song do |f|
-  - if @song.errors.any?
+=form_for @song do |f|
+  -if @song.errors.any?
     .error_explanation
       h5> =pluralize(@song.errors.count, t('.error')) 
       h5 =t('.prohibited_from_save')
@@ -7,9 +7,13 @@
         -@song.errors.full_messages.each do |msg|
           li =msg
   p
-    = f.label :title
-    = f.text_field :title
+    =f.label :title
+    =f.text_field :title
   p
-    = f.file_field :file
+    =select_tag(:artist_id, options_for_select(@artist_options))
   p
-    = f.submit
+    =select_tag(:band_id, options_for_select(@band_options))
+  p
+    =f.file_field :file
+  p
+    =f.submit

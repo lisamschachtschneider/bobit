@@ -26,6 +26,8 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    @artist_options = Artist.all.map{ |a| [ a.name, a.id ] }
+    @band_options = Band.all.map{ |b| [ b.name, b.id ] }
   end
 
   def show
@@ -43,6 +45,6 @@ class SongsController < ApplicationController
 
   private
   def song_params
-    params.require(:song).permit(:artist, :title, :file)
+    params.require(:song).permit(:title, :file, artists_attributes: [:id, :name], bands_attributes: [:id, :name])
   end
 end
