@@ -10,7 +10,6 @@
 			th = t('.song_name')
 		- @songs.each do |song|
 			tr
-				td =song.artist
 				td =song.title
 				td
 					audio(controls src= song.file)
