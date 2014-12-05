@@ -1,7 +1,7 @@
 class PlaylistsController < ApplicationController
   def new
     @playlist = Playlist.new
-    @songs = Song.all
+    @song = Song.all
   end
 
   def create
