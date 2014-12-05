@@ -10,10 +10,10 @@
     =f.label :title
     =f.text_field :title
   p
-    =select_tag(:artist_id, options_for_select(@artist_options))
+    =select_tag(:artist_id, options_for_select(@artist_options), include_blank: true)
     
   p
-    =select_tag(:band_id, options_for_select(@band_options))
+    =select_tag(:band_id, options_for_select(@band_options), include_blank: true)
   p
     =f.file_field :file
   p
