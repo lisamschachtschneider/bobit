@@ -4,7 +4,7 @@ h4 Playlist Page
     h6 =t(Playlist.human_attribute_name('title'))
     p =@playlist.title
     h6 Songs
-
+    p =@playlist.songs.title
     h6 =t(Playlist.human_attribute_name('created_at'))
     p =timeago(@playlist.created_at)
     h6 =t(Playlist.human_attribute_name('updated_at'))
