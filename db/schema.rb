@@ -30,15 +30,15 @@ ActiveRecord::Schema.define(version: 20141206103009) do
     t.datetime "updated_at"
   end
 
-  create_table "playlist_songs", id: false, force: true do |t|
-    t.integer  "song_id"
-    t.integer  "playlist_id"
+  create_table "playlists", force: true do |t|
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "playlists", force: true do |t|
-    t.string   "title"
+  create_table "playlists_songs", id: false, force: true do |t|
+    t.integer  "song_id"
+    t.integer  "playlist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
