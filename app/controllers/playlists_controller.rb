@@ -22,6 +22,7 @@ class PlaylistsController < ApplicationController
 
   def show
     @playlist = Playlist.find(params[:id])
+    @song = @playlist.songs.find(params[:id])
   end
 
 private

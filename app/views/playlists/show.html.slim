@@ -3,6 +3,8 @@ h4 Playlist Page
   .table
     h6 =t(Playlist.human_attribute_name('title'))
     p =@playlist.title
+    h6 Songs
+
     h6 =t(Playlist.human_attribute_name('created_at'))
     p =timeago(@playlist.created_at)
     h6 =t(Playlist.human_attribute_name('updated_at'))

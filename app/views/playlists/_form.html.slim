@@ -11,6 +11,6 @@
     =playlist_form.label :title
     =playlist_form.text_field :title
   p
-    =collection_check_boxes(:playlist, :song_ids, Song.all, :id, :song_by_title)
+    =collection_check_boxes(:playlists, :song_ids, Song.all, :id, :song_by_title)
   p
     =playlist_form.submit
