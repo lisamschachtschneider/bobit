@@ -5,7 +5,7 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-    @playlist = Playlist.create(playlist_params)
+    @playlist = @song.playlist.create(playlist_params)
     if @playlist.save
       redirect_to playlists_path
     else
@@ -14,6 +14,9 @@ class PlaylistsController < ApplicationController
   end
 
   def destroy
+    @playlist = Playlist.find(params[:id])
+    @playlist.destroy
+    redirect_to playlists_path
   end
 
   def index
