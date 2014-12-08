@@ -5,11 +5,12 @@ h5 = t('.recently_uploaded')
 table
   tr
     th =t('.song_name')
-    th
+    th artist
   - @songs.each do |song|
     tr
       td =song.title
-      td
+      td =song.audioable.name
+      td =song.audioable_type
         audio(controls src= song.file)
       td =link_to t('.show'), song_path(song)
       td =link_to t('.edit'), edit_song_path(song)
