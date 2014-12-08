@@ -22,12 +22,14 @@ class SongsController < ApplicationController
 
   def index
     @songs = Song.all
+# TIP look at later to see why this doesn't work
+#    @song.audioable = Song.all
   end
 
   def new
     @song = Song.new
     @artist_options = Artist.all.map{ |a| [ a.name, a.id ] }
-    @band_options = Band.all.map{ |b| [ b.name, b.id ] }
+    @band_options = Band.all.map{ |b| [ b.name, b.id ] }   
   end
 
   def show
