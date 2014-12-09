@@ -1,0 +1,12 @@
+h3 Artist Page
+.show_artists
+  h6 =t(Artist.human_attribute_name('name'))
+  p =@artist.name
+  h6 =t(Artist.human_attribute_name('created_at'))
+  p =timeago(@artist.created_at)
+  h6 =t(Artist.human_attribute_name('updated_at'))
+  p =timeago(@artist.updated_at)
+.links
+  p =link_to t('.back'), :back
+  p =link_to t('.edit'), edit_artist_path(@artist)
+  p =link_to t('.destroy'), artist_path(@artist), method: :delete, data: { confirm: 'Are you sure?' }

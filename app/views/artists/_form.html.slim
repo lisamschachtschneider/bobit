@@ -1,0 +1,22 @@
+=form_for @artist do |b|
+  -if @artist.errors.any?
+    .error_explanation
+      h5> =pluralize(@artist.errors.count, 'Errors')
+      h5 Prohibited from save
+      ul
+        -@artist.errors.full_messages.each do |msg|
+          li =msg
+  p
+    =b.label :name
+    =b.text_field :name
+
+  h6 Do you have any songs yet?
+  p
+    =b.fields_for :songs do |songs_form|
+
+      =songs_form.label :title
+      =songs_form.text_field :title
+
+      =songs_form.file_field :file
+  p      
+    =b.submit
