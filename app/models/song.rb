@@ -3,10 +3,10 @@ class Song < ActiveRecord::Base
   has_and_belongs_to_many :playlists
   mount_uploader :file, SongUploader
 
-  def song_by_title
-    " #{title} "
+  def song_by_title_and_name
+    " #{title} #{audioable.name}"
   end
-  
+
   def artist
     @song.artists
   end
