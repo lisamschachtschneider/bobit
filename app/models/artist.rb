@@ -1,7 +1,4 @@
 class Artist < ActiveRecord::Base
   has_many :songs, as: :audioable
-
-  def artist_songs
-    @artist.songs
-  end
+  accepts_nested_attributes_for :songs, allow_destroy: true
 end
