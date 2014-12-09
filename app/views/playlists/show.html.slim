@@ -1,16 +1,21 @@
 h4 Playlist Page
 .show_table
   .table
-    h6 =t(Playlist.human_attribute_name('title'))
+    h6 Playlist Title
     p =@playlist.title
-    h6 Songs
-
-    h6 =t(Playlist.human_attribute_name('created_at'))
-    p =timeago(@playlist.created_at)
-    h6 =t(Playlist.human_attribute_name('updated_at'))
-    p =timeago(@playlist.updated_at)
-  .audio 
-    audio(controls src= @song)
+    - @songs.each do |song|
+      h6 Song Title
+      p =song.title
+      h6 Artist/Band
+      p =song.audioable.name
+      p
+          audio(controls src= song.file)
+      h6 Type 
+      p =song.audioable_type
+      h6 =t(Playlist.human_attribute_name('created_at'))
+      p =timeago(@playlist.created_at)
+      h6 =t(Playlist.human_attribute_name('updated_at'))
+      p =timeago(@playlist.updated_at)
   .links
       p =link_to t('.back'), playlists_path
       p =link_to t('.edit'), edit_playlist_path(@playlist)

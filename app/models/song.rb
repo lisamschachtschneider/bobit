@@ -6,20 +6,4 @@ class Song < ActiveRecord::Base
   def song_by_title_and_name
     " #{title} #{audioable.name}"
   end
-
-  def artist
-    @song.artists
-  end
-
-  def song
-    @song = @song.audioable
-  end
-
-  def songs_by_artist
-    @song.artist
-  end
-
-  def songs_on_playlist
-    @song.playlist
-  end
 end
