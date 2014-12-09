@@ -6,7 +6,7 @@ h4 =t('.song_page')
     h6 artist
     p =@song.audioable.name
     h6 on the following playlists
-    p =@song.playlists.ids
+    p  =select_tag 'playlists', options_from_collection_for_select(@playlists, 'id', 'title')
     h6 =t(Song.human_attribute_name('created_at'))
     p =timeago(@song.created_at)
     h6 =t(Song.human_attribute_name('updated_at'))
