@@ -2,15 +2,16 @@
   
   -if @playlist.errors.any?
     .error_explanation
-      h5> =pluralize(@playlist.errors.count, t('.error'))
+      h5> =pluralize(playlist_form.errors.count, t('.error'))
       h5 =t('prohibited_from_save')
       ul
-        -@playlist.errors.full_messages.each do |msg|
+        -playlist_form.errors.full_messages.each do |msg|
           li =msg
   p
     =playlist_form.label :title
     =playlist_form.text_field :title
-  p
-    =collection_check_boxes(:playlists, :song_ids, Song.all, :id, :song_by_title)
-  p
-    =playlist_form.submit
+
+  h6 choose your songs to add to your playlist
+  p =collection_check_boxes(:playlists, :song_ids, Song.all, :id, :song_by_title_and_name)
+
+  p =playlist_form.submit

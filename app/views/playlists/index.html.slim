@@ -5,6 +5,7 @@ h4 Playlists
 .current_playlists
   h6 Current Playlists
   p Playlist Name
+  p
   - @playlists.each do |playlist|
     = playlist.title
     =link_to 'Show', playlist_path(playlist)
