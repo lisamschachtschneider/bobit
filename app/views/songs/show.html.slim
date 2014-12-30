@@ -4,7 +4,9 @@ h4 =t('.song_page')
     h6 =t(Song.human_attribute_name('title'))
     p =@song.title
     h6 artist
-    p =@song.audioable.name
+    p =@artist_options
+    h6 band
+    p =@band_options
     h6 on the following playlists
     p  =select_tag 'playlists', options_from_collection_for_select(@playlists, 'id', 'title')
     h6 =t(Song.human_attribute_name('created_at'))

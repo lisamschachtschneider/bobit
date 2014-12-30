@@ -35,6 +35,8 @@ class SongsController < ApplicationController
   def show
     @song = Song.find(params[:id])
     @playlists = Playlist.all
+    @artist_options = Artist.all.map{ |a| [ a.name, a.id ] }
+    @band_options = Band.all.map{ |b| [ b.name, b.id ] }  
   end
 
   def update
