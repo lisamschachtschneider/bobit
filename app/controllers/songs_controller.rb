@@ -28,6 +28,9 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    ## Artist.all, :id, :name
+    ##TODO: how to refactor to only allow these two attributes?
+    ## Artist.all, allow_Attributes? :id, :name
     @artist_options = Artist.all.map{ |a| [ a.name, a.id ] }
     @band_options = Band.all.map{ |b| [ b.name, b.id ] }   
   end
@@ -35,8 +38,6 @@ class SongsController < ApplicationController
   def show
     @song = Song.find(params[:id])
     @playlists = Playlist.all
-    @artist_options = Artist.all.map{ |a| [ a.name, a.id ] }
-    @band_options = Band.all.map{ |b| [ b.name, b.id ] }  
   end
 
   def update
