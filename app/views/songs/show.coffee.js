@@ -1,4 +1,4 @@
-h4 =t('.song_page')
+h4 {{'.song_page'}}
 .show_table
   .table
     h6 =t(Song.human_attribute_name('title'))

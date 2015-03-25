@@ -31,7 +31,7 @@ group :development do
   gem 'pry'
 end
 
-gem 'did_you_mean', group: [ :development, :test ]
+#gem 'did_you_mean', group: [ :development, :test ]
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
