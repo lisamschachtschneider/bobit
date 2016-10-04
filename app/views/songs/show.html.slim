@@ -17,7 +17,7 @@ h4 =t('.song_page')
     p =timeago(@song.created_at)
     h6 =t(Song.human_attribute_name('updated_at'))
     p =timeago(@song.updated_at)
-  .audio 
+  div id="audio" 
     audio(controls src= @song.file)
   .links
       p =link_to t('.back'), songs_path
