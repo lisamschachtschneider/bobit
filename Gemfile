@@ -5,7 +5,7 @@ gem 'compass-rails'
 gem 'compass-susy-plugin'
 gem 'zurb-foundation', '~> 4.3.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.2'
+gem 'rails', '4.2.11.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
